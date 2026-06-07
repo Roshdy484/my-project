@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نقل عفش جدة - خدمات احترافية</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Almarai:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Almarai', 'Poppins', sans-serif;
+            direction: rtl;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cairo', 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .container {
+                padding: 0 2rem;
+            }
+        }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background-color: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #003d7a;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .logo-text h1 {
+            font-size: 1.25rem;
+            color: #003d7a;
+            margin-bottom: 0.25rem;
+        }
+
+        .logo-text p {
+            font-size: 0.75rem;
+            color: #666666;
+        }
+
+        .phone-btn {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: #ff8c42;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease-out;
+        }
+
+        .phone-btn:hover {
+            background-color: #ff7a2a;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            overflow: hidden;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663616670521/MKVUPbjTYcXV7WTktaTWkW/hero-banner-G7ahLhT7wmqyW3mJg3Gi2x.webp');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 10;
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 2.25rem;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.125rem;
+            color: #f0f0f0;
+            margin-bottom: 2rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (min-width: 640px) {
+            .hero-buttons {
+                flex-direction: row;
+            }
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: bold;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease-out;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background-color: #ff8c42;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: #ff7a2a;
+            transform: scale(1.05);
+        }
+
+        .btn-secondary {
+            background-color: #ffffff;
+            color: #003d7a;
+        }
+
+        .btn-secondary:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: #003d7a;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.125rem;
+            color: #666666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .services-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-out;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease-out;
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.05);
+        }
+
+        .service-content {
+            padding: 1.5rem;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #ff8c42;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 1.25rem;
+            color: #003d7a;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-content p {
+            color: #666666;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .service-features {
+            list-style: none;
+            font-size: 0.9rem;
+            color: #1a1a1a;
+        }
+
+        .service-features li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            padding: 4rem 0;
+            background-color: #ffffff;
+        }
+
+        .why-us .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            .why-us .container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .why-us-content h2 {
+            font-size: 2rem;
+            color: #003d7a;
+            margin-bottom: 1.5rem;
+        }
+
+        .why-us-content p {
+            color: #666666;
+            margin-bottom: 2rem;
+            font-size: 1.125rem;
+        }
+
+        .features-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #ff8c42;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+        }
+
+        .feature-text h3 {
+            font-size: 1.125rem;
+            color: #003d7a;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-text p {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        .stats-box {
+            background-color: #ffffff;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .stat-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ff8c42;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666666;
+            font-size: 0.95rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 4rem 0;
+            position: relative;
+            background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663616670521/MKVUPbjTYcXV7WTktaTWkW/testimonial-bg-mnrQDqFbUbtksD8eH3wmLc.webp');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .testimonials::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 0;
+        }
+
+        .testimonials .container {
+            position: relative;
+            z-index: 10;
+        }
+
+        .testimonials .section-title h2,
+        .testimonials .section-title p {
+            color: #ffffff;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+        }
+
+        .stars {
+            display: flex;
+            gap: 0.25rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
+            color: #ff8c42;
+        }
+
+        .testimonial-text {
+            color: #1a1a1a;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+
+        .testimonial-name {
+            font-weight: bold;
+            color: #003d7a;
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 4rem 0;
+            background-color: #003d7a;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #d0d0d0;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 640px) {
+            .cta-buttons {
+                flex-direction: row;
+            }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #999999;
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (min-width: 768px) {
+            .footer-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        footer h3 {
+            color: #ffffff;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #999999;
+            text-decoration: none;
+            transition: color 0.3s ease-out;
+        }
+
+        footer a:hover {
+            color: #ff8c42;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333333;
+            padding-top: 2rem;
+            text-align: center;
+            color: #666666;
+            font-size: 0.9rem;
+        }
+
+        .hidden-sm {
+            display: none;
+        }
+
+        @media (min-width: 640px) {
+            .hidden-sm {
+                display: inline;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="logo-icon">نقل</div>
+                <div class="logo-text">
+                    <h1>نقل عفش جدة</h1>
+                    <p>خدمات نقل احترافية</p>
+                </div>
+            </div>
+            <a href="tel:0566720418" class="phone-btn">
+                <span>📞</span>
+                <span class="hidden-sm">0566720418</span>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>نقل عفشك بأمان واحترافية</h2>
+            <p>نحن متخصصون في نقل الأثاث والعفش في جدة بأعلى معايير الجودة والأمان. فريق محترف وخبرة عميقة لضمان راحتك.</p>
+            <div class="hero-buttons">
+                <a href="tel:0566720418" class="btn btn-primary">اتصل بنا الآن</a>
+                <a href="https://wa.me/966566720418" target="_blank" class="btn btn-secondary">تواصل عبر واتس</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>خدماتنا المتميزة</h2>
+                <p>نقدم مجموعة شاملة من خدمات النقل والتخزين المتخصصة</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663616670521/MKVUPbjTYcXV7WTktaTWkW/service-moving-KjGopq8n9rZYYjVokRksS4.webp" alt="نقل الأثاث" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🚚</div>
+                        <h3>نقل الأثاث</h3>
+                        <p>نقل آمن وسريع لجميع أنواع الأثاث والعفش مع فريق متدرب وخبير</p>
+                        <ul class="service-features">
+                            <li>✓ فريق محترف ومدرب</li>
+                            <li>✓ معدات حديثة وآمنة</li>
+                            <li>✓ أسعار منافسة</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663616670521/MKVUPbjTYcXV7WTktaTWkW/service-packing-cX74kcQch5TrpimEN7nLxX.webp" alt="التغليف الاحترافي" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">📦</div>
+                        <h3>التغليف الاحترافي</h3>
+                        <p>تغليف احترافي لحماية أثاثك من الأضرار أثناء النقل</p>
+                        <ul class="service-features">
+                            <li>✓ مواد تغليف عالية الجودة</li>
+                            <li>✓ حماية كاملة للأثاث</li>
+                            <li>✓ تغليف احترافي</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663616670521/MKVUPbjTYcXV7WTktaTWkW/service-storage-7cVsf3LR3HP78VvQ5PnLFJ.webp" alt="التخزين الآمن" class="service-image">
+                    <div class="service-content">
+                        <div class="service-icon">🏢</div>
+                        <h3>التخزين الآمن</h3>
+                        <p>مستودعات آمنة ومراقبة لتخزين أثاثك بكل أمان</p>
+                        <ul class="service-features">
+                            <li>✓ مستودعات آمنة</li>
+                            <li>✓ مراقبة 24/7</li>
+                            <li>✓ تخزين طويل الأجل</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-content">
+                <h2>لماذا تختار نقل عفش جدة؟</h2>
+                <p>نحن نقدم أفضل خدمات النقل والتخزين في جدة بأسعار منافسة وجودة عالية</p>
+
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">👥</div>
+                        <div class="feature-text">
+                            <h3>فريق محترف</h3>
+                            <p>فريق متدرب وذو خبرة في نقل الأثاث والعفش</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <div class="feature-text">
+                            <h3>أمان كامل</h3>
+                            <p>حماية كاملة لأثاثك مع تأمين شامل</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <div class="feature-text">
+                            <h3>سرعة وكفاءة</h3>
+                            <p>نقل سريع وفعال مع الحفاظ على جودة الخدمة</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-text">
+                            <h3>تغطية شاملة</h3>
+                            <p>خدمات نقل في جميع أنحاء جدة والمناطق المجاورة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-box">
+                <div class="stat-item">
+                    <div class="stat-number">+500</div>
+                    <div class="stat-label">عملية نقل ناجحة</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">رضا العملاء</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">خدمة العملاء</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>آراء عملائنا</h2>
+                <p>ماذا يقول عملاؤنا عن خدماتنا</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"خدمة ممتازة جداً! الفريق كان احترافياً وسريعاً. أثاثي وصل بدون أي ضرر."</p>
+                    <p class="testimonial-name">محمد أحمد</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"أفضل خدمة نقل عفش جربتها. الأسعار منافسة والجودة عالية جداً."</p>
+                    <p class="testimonial-name">فاطمة علي</p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testimonial-text">"فريق محترف وودود جداً. أنصح به بقوة لأي شخص يريد نقل عفش."</p>
+                    <p class="testimonial-name">سارة محمود</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>هل أنت مستعد للنقل؟</h2>
+            <p>تواصل معنا الآن واحصل على عرض سعر مجاني وخدمة احترافية</p>
+            <div class="cta-buttons">
+                <a href="tel:0566720418" class="btn btn-primary">اتصل بنا: 0566720418</a>
+                <a href="https://wa.me/966566720418" target="_blank" class="btn btn-secondary">تواصل عبر واتس</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>عن الشركة</h3>
+                    <p>نحن متخصصون في نقل الأثاث والعفش في جدة بأعلى معايير الجودة والأمان</p>
+                </div>
+                <div>
+                    <h3>خدماتنا</h3>
+                    <ul>
+                        <li>نقل الأثاث</li>
+                        <li>التغليف الاحترافي</li>
+                        <li>التخزين الآمن</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>تواصل معنا</h3>
+                    <ul>
+                        <li><a href="tel:0566720418">0566720418</a></li>
+                        <li>جدة، المملكة العربية السعودية</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>ساعات العمل</h3>
+                    <ul>
+                        <li>السبت - الخميس: 8:00 - 20:00</li>
+                        <li>الجمعة: 14:00 - 20:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 نقل عفش جدة. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
